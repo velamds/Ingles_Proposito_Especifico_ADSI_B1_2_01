@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Actividad de proceso</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            .iframe2{
+                width: 97%;
+                height: 96%;
+                border: none;
+                position: absolute;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+		<img src="assets/sena_esp8/templates/exercises/EXT1/actividad/intro.png" id="btn-simulacion" width="99%" align="center">
+        <!--<iframe src="assets/sena_esp5/templates/exercises/EXT/actividad/index.html" class="iframe"></iframe>    -->
+		<iframe src="" id="iframe1" class="iframe2"></iframe> 
+
+		<script>
+			  $(document).ready(function() {
+					$('#btn-simulacion').click(function(evt){
+                        $('#btn-simulacion').fadeOut();
+                        $('.iframe2').fadeIn();
+						var url='assets/sena_esp8/templates/exercises/EXT1/actividad/index.html';
+						$('#iframe1').attr('src',url);
+					});
+			  });
+		</script>
+	</body>
+</html>

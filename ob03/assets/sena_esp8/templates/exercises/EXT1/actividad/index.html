@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Build the Machine</title>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="phaser-game"></div>
+  <script src="js/phaser.min.js"></script>
+  <script src="js/spot_object.js"></script>
+  <script src="js/dragable_object.js"></script>
+  <script src="js/clickable_object.js"></script>
+  <script src="js/message_handler.js"></script>
+  <script src="js/progress_handler.js"></script>
+  <script src="js/timer_handler.js"></script>
+  <script src="js/state_boot.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/state_btm_load.js"></script>
+  <script src="js/data_btm_student.js"></script>
+  <script src="js/data_btm_businessman.js"></script>
+  <script src="js/data_btm_designer.js"></script>
+  <script src="js/data_btm_gamer.js"></script>
+  <script src="js/data_btm_teacher.js"></script>
+  <script src="js/data_btm_general.js"></script>
+  <script src="js/data_btm.js"></script>
+  <script src="js/data_btm1.js"></script>
+  <script src="js/state_btm1.js"></script>
+  <script src="js/data_btm2.js"></script>
+  <script src="js/state_btm2.js"></script>
+  <script src="js/data_btm3.js"></script>
+  <script src="js/state_btm3.js"></script>
+  <script src="js/state_btm4.js"></script>
+  <script src="js/state_btm_drag.js"></script>
+  <script src="js/state_btm_over.js"></script>
+  <script>
+    var game = new Phaser.Game(1920, 719, Phaser.CANVAS, '');
+    game.state.add('StateBoot', StateBoot);
+    game.state.add('StateLoad', StateBTMLoad);
+    game.state.add('StateBTM1', StateBTM1);
+    game.state.add('StateBTM2', StateBTM2);
+    game.state.add('StateBTM3', StateBTM3);
+    game.state.add('StateBTM4', StateBTM4);
+    game.state.add('StateBTMDrag', StateBTMDrag);
+    game.state.add('StateBTMOver', StateBTMOver);
+    game.state.start('StateBoot');
+  </script>
+</body>
+</html>
